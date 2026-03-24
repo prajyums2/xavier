@@ -293,7 +293,7 @@ export default function Home() {
                     സേവ്യർ ചിറ്റിലപ്പിള്ളി
                   </p>
                   {/* <p className="font-kartika text-xs md:text-sm text-slate-500">
-                    LDF സ്ഥാനാർഥി — വടക്കാഞ്ചേരി
+                    LDF സ്ഥാനാർത്ഥി  — വടക്കാഞ്ചേരി
                   </p> */}
                 </div>
               </motion.div>

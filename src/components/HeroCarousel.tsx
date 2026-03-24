@@ -178,7 +178,7 @@ export function HeroCarousel() {
           >
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-red-600/90 backdrop-blur-sm text-white text-[10px] font-semibold rounded-sm mb-2">
               <span className="w-1 h-1 rounded-full bg-white animate-pulse" />
-              LDF സ്ഥാനാർഥി
+              LDF സ്ഥാനാർത്ഥി
             </span>
             <h1
               className="text-3xl font-bold text-white leading-[1.1] mb-1"
@@ -249,7 +249,7 @@ export function HeroCarousel() {
           >
             <span className="inline-flex items-center gap-2 px-2.5 py-1 bg-red-600/90 backdrop-blur-sm text-white text-sm font-semibold rounded-sm mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-              LDF സ്ഥാനാർഥി
+              LDF സ്ഥാനാർത്ഥി
             </span>
             <h1
               className="text-5xl lg:text-7xl font-bold text-white mb-2 leading-[1.1] tracking-tight"
