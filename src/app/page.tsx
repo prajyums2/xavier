@@ -11,7 +11,6 @@ import { AchievementsGrid } from "@/components/AchievementsGrid";
 import { Compare } from "@/components/acernity/Compare";
 import { BudgetBreakdown } from "@/components/BudgetBreakdown";
 import { BookFlip } from "@/components/BookFlip";
-import { VisitCounter } from "@/components/VisitCounter";
 import {
   MapPin,
   Facebook,
@@ -419,11 +418,8 @@ export default function Home() {
             <div className="w-16 h-0.5 bg-red-500 mx-auto mb-6" />
 
             {/* Bottom */}
-            <div className="flex flex-col items-center gap-3">
-              <VisitCounter />
-              <div className="text-center text-xs text-white/25">
-                © 2026 സേവ്യർ ചിറ്റിലപ്പിള്ളി
-              </div>
+            <div className="text-center text-xs text-white/25">
+              © 2026 സേവ്യർ ചിറ്റിലപ്പിള്ളി
             </div>
           </div>
         </div>
