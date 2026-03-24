@@ -67,16 +67,16 @@ function getBubbleSize(amount: number) {
   return "w-[75px] h-[75px] sm:w-[90px] sm:h-[90px] md:w-[110px] md:h-[110px] lg:w-[125px] lg:h-[125px]";
 }
 
-// Text sizes based on bubble size
+// Text sizes based on bubble size - slightly bigger
 function getTextSize(amount: number) {
-  if (amount >= 400) return "text-xs sm:text-sm md:text-base lg:text-lg";
-  if (amount >= 150) return "text-[10px] sm:text-xs md:text-sm lg:text-base";
-  if (amount >= 100) return "text-[10px] sm:text-xs md:text-sm lg:text-base";
-  if (amount >= 40) return "text-[9px] sm:text-[11px] md:text-xs lg:text-sm";
-  if (amount >= 20) return "text-[9px] sm:text-[10px] md:text-xs lg:text-sm";
-  if (amount >= 10) return "text-[8px] sm:text-[10px] md:text-[11px] lg:text-xs";
-  if (amount >= 5) return "text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px]";
-  return "text-[7px] sm:text-[8px] md:text-[10px] lg:text-[11px]";
+  if (amount >= 400) return "text-sm sm:text-base md:text-lg lg:text-xl";
+  if (amount >= 150) return "text-xs sm:text-sm md:text-base lg:text-lg";
+  if (amount >= 100) return "text-xs sm:text-sm md:text-base lg:text-lg";
+  if (amount >= 40) return "text-[11px] sm:text-xs md:text-sm lg:text-base";
+  if (amount >= 20) return "text-[10px] sm:text-[11px] md:text-xs lg:text-sm";
+  if (amount >= 10) return "text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs";
+  if (amount >= 5) return "text-[9px] sm:text-[10px] md:text-[11px] lg:text-xs";
+  return "text-[8px] sm:text-[9px] md:text-[10px] lg:text-[11px]";
 }
 
 function getCategorySize(amount: number) {
@@ -164,11 +164,6 @@ function Bubble({
       {/* Hover glow ring */}
       <div className="absolute inset-0 rounded-full bg-blue-400/0 group-hover:bg-blue-400/10 transition-all duration-300 pointer-events-none" />
 
-      {/* Icon */}
-      <item.icon
-        className={`${iconClass} text-white/30 group-hover:text-white/50 mb-0.5 sm:mb-1 relative z-10 transition-colors duration-300`}
-      />
-
       {/* Amount */}
       <div className="relative z-10 leading-none flex items-baseline gap-0.5">
         <span
@@ -176,7 +171,7 @@ function Bubble({
         >
           ₹{item.amount}
         </span>
-        <span className="text-[5px] sm:text-[6px] md:text-[7px] lg:text-[8px] text-white/40 font-medium">
+        <span className="text-[6px] sm:text-[7px] md:text-[8px] lg:text-[10px] text-white/40 font-medium">
           കോടി
         </span>
       </div>
