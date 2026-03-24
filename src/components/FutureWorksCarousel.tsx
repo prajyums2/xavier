@@ -165,7 +165,7 @@ export function FutureWorksCarousel() {
         <div className="flex">
           {futureSlides.map((slide, index) => (
             <div key={index} className="relative flex-[0_0_100%] min-w-0">
-              <div className="relative min-h-[70vh] md:min-h-[80vh] flex items-center">
+              <div className="relative min-h-[70vh] md:min-h-[80vh]">
                 {/* Background Image */}
                 <Image
                   src={slide.image}
@@ -175,12 +175,12 @@ export function FutureWorksCarousel() {
                   sizes="100vw"
                   loading={index < 3 ? "eager" : "lazy"}
                 />
-                {/* Gradient overlays */}
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                {/* Gradient overlays - reduced opacity for more image visibility */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-                {/* Content */}
-                <div className="relative z-10 w-full px-6 md:px-12 lg:px-20 py-12">
+                {/* Content — positioned at bottom left */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 py-8 md:py-12">
                   <div className="max-w-3xl">
                     {/* Amount badge */}
                     {slide.amount && (
