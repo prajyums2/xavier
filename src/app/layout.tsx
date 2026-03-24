@@ -13,6 +13,27 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
   },
+  openGraph: {
+    title: "സേവ്യർ ചിറ്റിലപ്പിള്ളി — LDF സ്ഥാനാർത്ഥി",
+    description: "വടക്കാഞ്ചേരി നിയോജക മണ്ഡലം — വികസനം. വിശ്വാസം. വിജയം.",
+    images: [
+      {
+        url: "/assets/portrait/portrait.jpg",
+        width: 400,
+        height: 500,
+        alt: "സേവ്യർ ചിറ്റിലപ്പിള്ളി",
+      },
+    ],
+    type: "website",
+    locale: "ml_IN",
+    siteName: "സേവ്യർ ചിറ്റിലപ്പിള്ളി",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "സേവ്യർ ചിറ്റിലപ്പിള്ളി — LDF സ്ഥാനാർത്ഥി",
+    description: "വടക്കാഞ്ചേരി നിയോജക മണ്ഡലം",
+    images: ["/assets/portrait/portrait.jpg"],
+  },
 };
 
 export default function RootLayout({
