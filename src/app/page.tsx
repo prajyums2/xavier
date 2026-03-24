@@ -148,26 +148,10 @@ export default function Home() {
         <FutureWorksCarousel />
       </section>
 
-      {/* 5. MLA Booklet — Book Flip */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader subtitle="പുസ്തകം" title="എംഎൽഎ വികസന റിപ്പോർട്ട്" />
-          <BookFlip />
-        </div>
-      </section>
-
-      {/* 6. Achievements with Photos */}
-      <section className="py-16 md:py-20 bg-slate-50 border-y border-slate-100">
-        <div className="container mx-auto px-6">
-          <SectionHeader subtitle="നേട്ടങ്ങൾ" title="അഞ്ച് വർഷത്തെ വികസനം" />
-          <AchievementsGrid />
-        </div>
-      </section>
-
-      {/* 7. Before / After — Aceternity Compare */}
+      {/* 5. Before / After — Aceternity Compare */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6">
-          <SectionHeader subtitle="മാറ്റം" title="മുൻപും ശേഷവും" />
+          <SectionHeader subtitle="മാറ്റം" title="അന്നും ഇന്നും" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {beforeAfterItems.map((item, index) => (
               <motion.div
@@ -193,6 +177,22 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 6. Achievements with Photos */}
+      <section className="py-16 md:py-20 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-6">
+          <SectionHeader subtitle="നേട്ടങ്ങൾ" title="അഞ്ച് വർഷത്തെ വികസനം" />
+          <AchievementsGrid />
+        </div>
+      </section>
+
+      {/* 7. MLA Booklet — Book Flip */}
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <SectionHeader subtitle="പുസ്തകം" title="എംഎൽഎ വികസന റിപ്പോർട്ട്" />
+          <BookFlip />
         </div>
       </section>
 
