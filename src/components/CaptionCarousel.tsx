@@ -255,7 +255,7 @@ export function CaptionCarousel() {
         <div className="flex">
           {slides.map((slide, index) => (
             <div key={index} className="relative flex-[0_0_100%] min-w-0">
-              <div className="relative aspect-[16/9] md:aspect-[21/9]">
+              <div className="relative aspect-[4/5] sm:aspect-[16/9] md:aspect-[21/9]">
                 <Image
                   src={slide.image}
                   alt={slide.title}

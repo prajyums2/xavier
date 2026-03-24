@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 
 const allProjects = [
-  { category: "കിഫ്ബി സൂപ്പർ സ്പെഷ്യാലിറ്റി", amount: 478.41, icon: Heart },
+  { category: "സൂപ്പർ സ്പെഷ്യാലിറ്റി ബ്ലോക്കും അമ്മയും കുഞ്ഞും ബ്ലോക്കും (കിഫ്ബി)", amount: 478.41, icon: Heart },
   { category: "മെഡിക്കൽ കോളേജ്", amount: 188.88, icon: Heart },
   { category: "റോഡുകൾ", amount: 179.21, icon: Route },
   { category: "വൈദ്യുതി", amount: 130.25, icon: Zap },
@@ -51,7 +51,7 @@ const total = 1279.68;
 // Size buckets with better mobile sizes
 function getBubbleSize(amount: number) {
   if (amount >= 400)
-    return "w-[130px] h-[130px] sm:w-[155px] sm:h-[155px] md:w-[190px] md:h-[190px] lg:w-[210px] lg:h-[210px]";
+    return "w-[160px] h-[160px] sm:w-[190px] sm:h-[190px] md:w-[240px] md:h-[240px] lg:w-[280px] lg:h-[280px]";
   if (amount >= 150)
     return "w-[110px] h-[110px] sm:w-[125px] sm:h-[125px] md:w-[155px] md:h-[155px] lg:w-[175px] lg:h-[175px]";
   if (amount >= 100)
@@ -69,7 +69,7 @@ function getBubbleSize(amount: number) {
 
 // Text sizes based on bubble size
 function getTextSize(amount: number) {
-  if (amount >= 400) return "text-[11px] sm:text-sm md:text-base lg:text-lg";
+  if (amount >= 400) return "text-xs sm:text-sm md:text-base lg:text-lg";
   if (amount >= 150) return "text-[10px] sm:text-xs md:text-sm lg:text-base";
   if (amount >= 100) return "text-[10px] sm:text-xs md:text-sm lg:text-base";
   if (amount >= 40) return "text-[9px] sm:text-[11px] md:text-xs lg:text-sm";
@@ -80,7 +80,7 @@ function getTextSize(amount: number) {
 }
 
 function getCategorySize(amount: number) {
-  if (amount >= 400) return "text-[7px] sm:text-[8px] md:text-[9px] lg:text-[10px]";
+  if (amount >= 400) return "text-[7px] sm:text-[8px] md:text-[10px] lg:text-[11px]";
   if (amount >= 100) return "text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px]";
   if (amount >= 20) return "text-[6px] sm:text-[7px] md:text-[8px] lg:text-[9px]";
   return "text-[5px] sm:text-[6px] md:text-[7px] lg:text-[8px]";
@@ -184,7 +184,7 @@ function Bubble({
       {/* Category */}
       <div className="relative z-10 mt-1 px-2 sm:px-3 leading-snug">
         <span
-          className={`${catClass} text-white/50 group-hover:text-white/70 font-medium line-clamp-2 transition-colors duration-300`}
+          className={`${catClass} text-white/50 group-hover:text-white/70 font-medium ${item.amount >= 400 ? "line-clamp-3" : "line-clamp-2"} transition-colors duration-300`}
         >
           {item.category}
         </span>
