@@ -47,7 +47,7 @@ export function AchievementsGrid() {
           />
           <p className="text-xs text-slate-400">
             {startIndex + 1}-{Math.min(endIndex, achievements.length)} /{" "}
-            {achievements.length} നേട്ടങ്ങൾ
+            {achievements.length}
           </p>
         </div>
       )}

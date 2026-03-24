@@ -135,7 +135,7 @@ export default function Home() {
       {/* 3. Captioned Project Gallery */}
       <section id="projects" className="bg-white">
         <div className="py-10 md:py-14">
-          <SectionHeader subtitle="ഗാലറി" title="വികസന പദ്ധതികൾ" />
+          <SectionHeader subtitle="" title="വികസന പദ്ധതികൾ" />
         </div>
         <CaptionCarousel />
       </section>
@@ -143,7 +143,7 @@ export default function Home() {
       {/* 4. Future Works Slideshow */}
       <section className="relative">
         <div className="py-10 md:py-14 bg-white">
-          <SectionHeader subtitle="ഭാവി പദ്ധതികൾ" title="മുന്നോട്ടുള്ള വഴി" />
+          <SectionHeader subtitle="" title="മുന്നോട്ടുള്ള വഴി" />
         </div>
         <FutureWorksCarousel />
       </section>
@@ -151,7 +151,7 @@ export default function Home() {
       {/* 5. Before / After — Aceternity Compare */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-6">
-          <SectionHeader subtitle="മാറ്റം" title="അന്നും ഇന്നും" />
+          <SectionHeader subtitle="ഇതാണ് മാറ്റം" title="അന്നും ഇന്നും" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {beforeAfterItems.map((item, index) => (
               <motion.div
@@ -183,7 +183,7 @@ export default function Home() {
       {/* 6. Achievements with Photos */}
       <section className="py-16 md:py-20 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-6">
-          <SectionHeader subtitle="നേട്ടങ്ങൾ" title="അഞ്ച് വർഷത്തെ വികസനം" />
+          <SectionHeader subtitle="" title="ഒന്നായി തുടരാം നവകേരളത്തിലേക്ക്" />
           <AchievementsGrid />
         </div>
       </section>
@@ -191,7 +191,10 @@ export default function Home() {
       {/* 7. MLA Booklet — Book Flip */}
       <section className="py-12 md:py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader subtitle="പുസ്തകം" title="എംഎൽഎ വികസന റിപ്പോർട്ട്" />
+          <SectionHeader
+            subtitle="വടക്കാഞ്ചേരി മണ്ഡലം വികസനരേഖ"
+            title="ഇതാണ് മാറ്റം"
+          />
           <BookFlip />
         </div>
       </section>
@@ -259,13 +262,15 @@ export default function Home() {
                     കഴിഞ്ഞ അഞ്ച് വർഷം കൊണ്ട് നേടിയെടുത്തത്.
                   </p>
                   <p>
-                    മുടങ്ങിക്കിടന്നിരുന്ന പദ്ധതികൾ ത്വരിതപ്പെടുത്താനും, പുതിയ
-                    പദ്ധതികൾ രൂപപ്പെടുത്താനും നമുക്ക് സാധിച്ചു.
+                    മുടങ്ങിക്കിടന്നിരുന്ന പദ്ധതികൾ ത്വരിതപ്പെടുത്താനും,
+                    നിരന്തരമായി പിന്തുടരാനും, പുതിയ പദ്ധതികൾ രൂപപ്പെടുത്താനും
+                    നമുക്ക് സാധിച്ചു. പതിറ്റാണ്ടുകളായുള്ള പട്ടയപ്രശ്നങ്ങൾക്ക്
+                    വരെ പരിഹാരം കാണാനായി.
                   </p>
                   <p>
                     കേരളത്തിന്റെ പുരോഗതിക്കൊപ്പം ഓടിയെത്തിയ ഈ അഞ്ച് വർഷത്തെ
-                    ഇടപെടലുകളുടെയും, വികസനപ്രവർത്തനങ്ങളുടെയും ഒരു ചെറിയ
-                    പരിച്ഛേദമാണ് ഈ പുസ്തകത്തിൽ ഉൾപ്പെടുത്തിയിരിക്കുന്നത്.
+                    ഇടപെടലുകളുടെയും, വികസനപ്രവർത്തനങ്ങളുടെയും ഒരു സംക്ഷിപ്തമാണ്
+                    ഈ വെബ്‌സൈറ്റിൽ ഉൾപ്പെടുത്തിയിരിക്കുന്നത്.
                   </p>
                   <p className="font-semibold text-slate-900">
                     ഏറെയുണ്ട് പറയാൻ, നാടിന്റെ പുരോഗതി, അത് നമുക്ക്
@@ -310,7 +315,7 @@ export default function Home() {
                   സേവ്യർ ചിറ്റിലപ്പിള്ളി
                 </h3>
                 <p className="text-sm text-white/50 mb-3">
-                  LDF സ്ഥാനാർഥി — വടക്കാഞ്ചേരി നിയോജക മണ്ഡലം
+                  വടക്കാഞ്ചേരി നിയോജക മണ്ഡലം
                 </p>
                 <div className="flex items-center justify-center md:justify-start gap-1.5 text-xs text-white/40">
                   <MapPin className="w-3.5 h-3.5" />
