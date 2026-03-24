@@ -40,6 +40,10 @@
   @apply border-border;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   @apply bg-background text-foreground;
   font-family: "Noto Sans Malayalam", sans-serif;
