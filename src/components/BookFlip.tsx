@@ -181,34 +181,20 @@ export function BookFlip() {
         viewport={{ once: true }}
         className="flex flex-col items-center"
       >
-        {/* Top bar */}
-        <div className="flex items-center justify-between w-full max-w-5xl mb-5 px-2">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-red-100 flex items-center justify-center">
-              <FileText className="w-4 h-4 text-red-600" />
-            </div>
-            <div>
-              <h3 className="text-slate-900 font-bold text-sm md:text-base">
-                എംഎൽഎ വികസന റിപ്പോർട്ട്
-              </h3>
-              <p className="text-slate-400 text-xs">2021 - 2026 • {pages} പേജുകൾ</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setSpread(!spread)}
-              className={cn(
-                "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border transition-colors",
-                spread
-                  ? "bg-red-50 border-red-200 text-red-700"
-                  : "border-slate-200 text-slate-600 hover:bg-slate-50"
-              )}
-            >
-              <Maximize2 className="w-3.5 h-3.5" />
-              {spread ? "തുറന്ന പുസ്തകം" : "ഒറ്റ പേജ്"}
-            </button>
-          </div>
+        {/* Toggle button only */}
+        <div className="flex justify-center mb-5">
+          <button
+            onClick={() => setSpread(!spread)}
+            className={cn(
+              "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-md border transition-colors",
+              spread
+                ? "bg-red-50 border-red-200 text-red-700"
+                : "border-slate-200 text-slate-600 hover:bg-slate-50"
+            )}
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+            {spread ? "തുറന്ന പുസ്തകം" : "ഒറ്റ പേജ്"}
+          </button>
         </div>
 
         {/* Book area */}
