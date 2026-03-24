@@ -3,23 +3,48 @@
 import { useEffect, useState } from "react";
 import { Eye } from "lucide-react";
 
+const NAMESPACE = "xavier-mla-website";
+const KEY = "visit-count";
+
 export function VisitCounter() {
   const [count, setCount] = useState<number | null>(null);
 
   useEffect(() => {
-    // Get current count from localStorage
-    let currentCount = parseInt(localStorage.getItem("xavier_visit_count") || "0", 10);
+    const incrementAndFetch = async () => {
+      try {
+        // Increment and get the count
+        const res = await fetch(
+          `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`
+        );
+        const data = await res.json();
+        setCount(data.value);
+      } catch (error) {
+        // Fallback: try to just get the count without incrementing
+        try {
+          const res = await fetch(
+            `https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`
+          );
+          const data = await res.json();
+          setCount(data.value || 0);
+        } catch {
+          setCount(0);
+        }
+      }
+    };
 
-    // Check if this session already counted
+    // Check if already counted in this session
     const sessionCounted = sessionStorage.getItem("xavier_session_counted");
 
     if (!sessionCounted) {
-      currentCount += 1;
-      localStorage.setItem("xavier_visit_count", currentCount.toString());
+      incrementAndFetch();
       sessionStorage.setItem("xavier_session_counted", "true");
+    } else {
+      // Just fetch without incrementing
+      fetch(`https://api.countapi.xyz/get/${NAMESPACE}/${KEY}`)
+        .then((res) => res.json())
+        .then((data) => setCount(data.value || 0))
+        .catch(() => setCount(0));
     }
-
-    setCount(currentCount);
   }, []);
 
   if (count === null) return null;
